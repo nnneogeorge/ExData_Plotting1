@@ -56,13 +56,15 @@ my.plot <-function(x){
   lines(dataImport.sub$Date_Time, dataImport.sub$Sub_metering_1)
   lines(dataImport.sub$Date_Time, dataImport.sub$Sub_metering_2, col = "red")
   lines(dataImport.sub$Date_Time, dataImport.sub$Sub_metering_3, col = "blue")
-  legend("topright",lwd=1,  col = c("black","red", "blue"), legend = c("Sub_Metering_1","Sub_Metering_2", "Sub_Metering_3"), bty="n")
+  legend("topright", lwd=0.5,  col = c("black","red", "blue"), 
+         legend = c("Sub_Metering_1","Sub_Metering_2", "Sub_Metering_3"), bty="n", ,inset =c(0.05,0))
   #plotDownRight
   plot(dataImport.sub$Date_Time, dataImport.sub$Global_reactive_power, type="l", xlab ="datetime", ylab= "Global_reactive_power")
 }
 
-par(mfrow = c(2,2), mar = c(3, 3, 3, 2), oma = c(2, 0.2, 1, 0), mgp = c(2, 0.5, 0) +0.1)
+par(mfrow = c(2,2), mar = c(3, 3, 3, 1)+0.1, oma = c(2, 1.2, 1, 1)+0.1, mgp = c(2.1, 0.5, 0), cex=.65)
 my.plot()
 
 dev.copy(png, file = "plot4.png",width=480,height=480)
 dev.off()
+
