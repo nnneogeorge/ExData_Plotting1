@@ -46,6 +46,6 @@ lines(dataImport.sub$Date_Time, dataImport.sub$Sub_metering_1)
 lines(dataImport.sub$Date_Time, dataImport.sub$Sub_metering_2, col = "red")
 lines(dataImport.sub$Date_Time, dataImport.sub$Sub_metering_3, col = "blue")
 legend("topright", lwd=0.5,  col = c("black","red", "blue"), 
-       legend = c("Sub_Metering_1","Sub_Metering_2", "Sub_Metering_3"), bty="n", ,inset =c(0.051,0))
-dev.copy(png, file = "plot3.png",width=480,height=480)
+       legend = c("Sub_Metering_1","Sub_Metering_2", "Sub_Metering_3"), bty="n", inset =c(0.051,0))
+dev.copy(png, file = "plot3_.png",width=480,height=480)
 dev.off()
