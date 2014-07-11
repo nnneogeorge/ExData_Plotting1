@@ -1,4 +1,3 @@
-setwd('/home/george/Downloads')
 #data_input
 # Date: Date in format dd/mm/yyyy
 # Time: time in format hh:mm:ss
